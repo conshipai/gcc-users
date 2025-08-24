@@ -64,6 +64,9 @@ module.exports = {
         'react-dom': { singleton: true, requiredVersion: '^18.2.0' }
       }
     }),
+    new webpack.DefinePlugin({
+    'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || 'http://localhost:3001')
+  }),
     new HtmlWebpackPlugin({
       template: './public/index.html'
     })

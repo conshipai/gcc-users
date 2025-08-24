@@ -65,7 +65,7 @@ module.exports = {
       }
     }),
     new webpack.DefinePlugin({
-    'process.env.REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || 'http://localhost:3001')
+    'process.env.REACT_APP_API_URL': JSON.stringify('https://api.gcc.conship.ai')
   }),
     new HtmlWebpackPlugin({
       template: './public/index.html'
